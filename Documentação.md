@@ -78,7 +78,7 @@ WhatsApp (Evolution API)
 ##  Como importar no n8n
 
 1. Acesse seu n8n → **Workflows** → **Import from file**
-2. Selecione o arquivo `banco_de_dados_e_agendamento__0_1_.json`
+2. Selecione o arquivo `projeto de atendimento e agendamento-n8n.json`
 3. Configure as credenciais (veja seção abaixo)
 4. Ative o workflow
 

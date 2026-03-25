@@ -177,7 +177,7 @@ verificaAgendamento → Google Calendar (próximos 7 dias)
 Desenvolvido por **Kauã B** — estudante de Engenharia de Software com foco em automação com n8n e desenvolvimento de agentes de IA para pequenos negócios.
 
 - Foco: automação comercial para barbearias e clínicas
-- Stack principal: n8n · Python · OpenAI API · Redis · Supabase
+- Stack principal: n8n · Google Calendar · OpenAI API · Redis · Supabase
 
 ---
 

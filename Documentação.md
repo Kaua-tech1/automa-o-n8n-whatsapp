@@ -72,7 +72,7 @@ WhatsApp (Evolution API)
 - **OpenAI** — o4-mini (agente principal) + GPT-4.1 (agente de agendamento)
 - **Groq** — transcrição de áudio (Whisper large-v3-turbo) via HTTP Request
 - **Redis** — memória de conversa + debounce + bloqueio de sessão + rate limiting
-- **Supabase** — banco de dados de agendamentos (tabela `Coversas`)
+- **Supabase** — banco de dados de agendamentos (tabela `Agendamento`)
 - **Google Calendar** — agenda da barbearia
 - **Google Drive** — armazenamento da tabela de preços
 
@@ -103,7 +103,7 @@ Antes de usar, configure as seguintes credenciais no n8n:
 
 ### Banco de dados Supabase
 
-Crie a tabela `Coversas` com as colunas:
+Crie a tabela `Agendamento` com as colunas:
 
 ```sql
 CREATE TABLE "Coversas" (
@@ -120,13 +120,13 @@ CREATE TABLE "Coversas" (
 
 | Item | Onde alterar | Padrão |
 |---|---|---|
-| Calendar de registro/verificação | Nós `registra Agendamento` e `verifica Agendamento` | `kauabrdoze@gmail.com` |
+| Calendar de registro/verificação | Nós `registra Agendamento` e `verifica Agendamento` | `exemplo@gmail.com` |
 | Calendar de cancelamento | Nó `deleta Agendamento` | Calendar separado (grupo) |
 | Tabela de preços | Nó `Google Drive Download` (fileId) | ID fixo de exemplo |
 | Duração do agendamento | System prompt do `agendamento` | 2 horas |
-| Janela de debounce | Nó `Wait1` | 1 segundo |
+| Janela de debounce | Nó `Wait1` | 10 segundos |
 | TTL da memória | Nó `memoria1` | 3600 segundos (1 hora) |
-| Janela de contexto | Nó `memoria1` | 20 mensagens |
+| Janela de contexto | Nó `memoria` | 20 mensagens |
 
 ---
 
